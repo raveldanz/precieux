@@ -32,14 +32,14 @@
             brand: {
               cream: '#FAF7F2',
               creamLight: '#FFFDF9',
-              gold: '#B88B42',
-              goldLight: '#DFC592',
-              goldDark: '#8A6320',
+              gold: '#C5A059',
+              goldLight: '#E6CA85',
+              goldDark: '#99732B',
               rose: '#F8EEEC',
               roseAccent: '#E8C5C8',
               charcoal: '#24201D',
-              muted: '#57524C',
-              border: '#E5DAC8'
+              muted: '#625C55',
+              border: '#EADFCB'
             }
           },
           fontFamily: {
@@ -63,6 +63,30 @@
       font-family: 'Playfair Display', serif;
     }
 
+    .btn-gold {
+      background-color: #B4873E;
+      color: #FFFFFF;
+      transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: #9E7330;
+      box-shadow: 0 8px 20px rgba(180, 135, 62, 0.24);
+    }
+
+    .soft-card {
+      background-color: #FFFFFF;
+      border: 1px solid #EAE0CF;
+      box-shadow: 0 2px 14px rgba(36, 32, 29, 0.04);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .soft-card:hover {
+      border-color: #D2B275;
+      box-shadow: 0 10px 26px rgba(180, 135, 62, 0.11);
+      transform: translateY(-2px);
+    }
+
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -77,24 +101,24 @@
 <body class="selection:bg-amber-200 selection:text-amber-950">
 
   <!-- NAVIGATION -->
-  <header class="sticky top-0 z-40 bg-[#FFFDF9] border-b border-[#E5DAC8]">
+  <header class="sticky top-0 z-40 bg-[#FFFDF9]/95 border-b border-[#EADFCB] transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
         <div
-          class="w-11 h-11 rounded-full border-2 border-brand-gold flex items-center justify-center bg-white overflow-hidden flex-shrink-0">
-          <span class="font-luxury font-bold text-xl text-brand-goldDark">P</span>
+          class="w-12 h-12 rounded-full border-2 border-brand-gold flex items-center justify-center bg-white shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
+          <span class="font-luxury font-bold text-2xl text-brand-gold">P</span>
         </div>
         <div class="flex flex-col">
           <span
             class="font-luxury text-xl sm:text-2xl font-bold tracking-wider text-brand-charcoal leading-none">PRÉCIEUX</span>
-          <span class="text-xs tracking-[0.16em] text-brand-goldDark uppercase font-medium mt-0.5">Usherettes & Pagar
+          <span class="text-xs tracking-[0.18em] text-brand-goldDark uppercase font-semibold mt-0.5">Usherettes & Pagar
             Ayu</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-brand-charcoal/85">
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-brand-charcoal/80">
         <a href="#about" class="hover:text-brand-goldDark transition-colors">Tentang Kami</a>
         <a href="#services" class="hover:text-brand-goldDark transition-colors">Layanan</a>
         <a href="#catalog" class="hover:text-brand-goldDark transition-colors">Katalog Wardrobe</a>
@@ -106,7 +130,7 @@
       <div class="hidden sm:flex items-center gap-3">
         <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="general" target="_blank"
           rel="noopener noreferrer"
-          class="wa-cta px-5 py-2.5 rounded-md text-xs font-semibold tracking-wider uppercase text-white bg-brand-charcoal hover:bg-[#3A342F] transition-colors flex items-center gap-2">
+          class="wa-cta btn-gold px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase flex items-center gap-2">
           <i class="fa-brands fa-whatsapp text-sm"></i>
           <span>Hubungi Kami</span>
         </a>
@@ -114,14 +138,14 @@
 
       <!-- Mobile Menu Button -->
       <button id="mobileMenuBtn"
-        class="lg:hidden p-2 text-brand-charcoal hover:text-brand-goldDark text-xl focus:outline-none"
+        class="lg:hidden p-2 text-brand-charcoal hover:text-brand-gold transition-colors text-xl focus:outline-none"
         aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden lg:hidden bg-[#FFFDF9] border-b border-[#E5DAC8] px-6 py-5">
+    <div id="mobileDrawer" class="hidden lg:hidden bg-[#FFFDF9] border-b border-[#EADFCB] px-6 py-5 shadow-lg">
       <div class="flex flex-col gap-4 text-sm font-medium text-brand-charcoal">
         <a href="#about" class="mobile-nav-link py-1 hover:text-brand-goldDark">Tentang Kami</a>
         <a href="#services" class="mobile-nav-link py-1 hover:text-brand-goldDark">Layanan Acara</a>
@@ -130,7 +154,7 @@
         <a href="#testimonials" class="mobile-nav-link py-1 hover:text-brand-goldDark">Kata Mereka (Testimoni)</a>
         <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="general" target="_blank"
           rel="noopener noreferrer"
-          class="wa-cta mt-2 text-center py-3 rounded-md text-white bg-brand-charcoal hover:bg-[#3A342F] font-semibold text-xs uppercase tracking-wider">
+          class="wa-cta btn-gold mt-2 text-center py-3 rounded-full font-semibold text-xs uppercase tracking-wider">
           <i class="fa-brands fa-whatsapp mr-1"></i> Konsultasi WhatsApp
         </a>
       </div>
@@ -138,51 +162,49 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="pt-14 pb-16 md:py-24 bg-[#FAF7F2]">
+  <section class="pt-12 pb-16 md:py-24 bg-[#FFFDF9]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="w-full text-left">
         <h1
-          class="font-luxury text-4xl sm:text-5xl lg:text-6xl text-brand-charcoal font-bold leading-[1.15] tracking-tight mb-6">
+          class="font-luxury text-4xl sm:text-5xl lg:text-6xl text-brand-charcoal font-bold leading-[1.16] tracking-tight mb-6">
           Menyempurnakan Momen Istimewa dengan <br class="hidden sm:inline" />
-          <span class="text-brand-goldDark italic font-serif font-semibold">Keanggunan & Keramahan</span> Profesional.
+          <span class="text-brand-goldDark italic font-serif">Keanggunan & Keramahan</span> Profesional.
         </h1>
 
-        <p class="text-brand-muted text-base sm:text-lg leading-relaxed max-w-3xl mb-9">
+        <p class="text-brand-muted text-base sm:text-lg leading-relaxed max-w-3xl mb-8">
           Dikenal dengan nama <em>"Say Presyu"</em>, kami menghadirkan usherettes berpenampilan prima, tata krama ramah,
           dan koleksi gaun, kebaya payet, serta busana adat terlengkap untuk pernikahan, gala korporat, dan pesta ulang
           tahun mewah Anda.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-start gap-3 sm:gap-4 mb-14">
+        <div class="flex flex-col sm:flex-row items-center justify-start gap-3.5 sm:gap-4 mb-14">
           <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="general" target="_blank"
             rel="noopener noreferrer"
-            class="wa-cta w-full sm:w-auto px-8 py-4 rounded-md font-semibold text-xs sm:text-sm uppercase tracking-wider text-white bg-brand-charcoal hover:bg-[#3A342F] transition-colors flex items-center justify-center gap-3">
-            <i class="fa-brands fa-whatsapp text-base"></i>
+            class="wa-cta btn-gold w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-md flex items-center justify-center gap-3">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
             <span>Konsultasi Booking Jadwal</span>
           </a>
           <a href="#catalog"
-            class="w-full sm:w-auto px-7 py-4 rounded-md font-semibold text-xs sm:text-sm uppercase tracking-wider text-brand-charcoal bg-white border border-[#D4C5AE] hover:border-brand-charcoal transition-colors flex items-center justify-center">
+            class="w-full sm:w-auto px-7 py-4 rounded-full font-semibold text-xs sm:text-sm uppercase tracking-wider text-brand-charcoal bg-[#FAF7F2] border border-[#DACBB5] hover:border-brand-gold hover:bg-[#F5ECE8]/60 transition-all flex items-center justify-center">
             <span>Jelajahi Katalog Busana</span>
           </a>
         </div>
 
-        <!-- Highlights Bar -->
-        <div class="pt-6 sm:pt-8 border-t border-[#E5DAC8] flex flex-wrap items-baseline gap-x-10 gap-y-4 text-left">
-          <div class="flex items-baseline gap-2.5">
-            <span class="font-luxury text-2xl sm:text-3xl font-bold text-brand-charcoal">430+</span>
-            <span class="text-xs sm:text-sm text-brand-muted font-medium">Acara Sukses</span>
+        <!-- Quick Trust Highlights -->
+        <div class="pt-6 sm:pt-8 border-t border-[#E8DEC9] grid grid-cols-3 w-full gap-3 sm:gap-8 text-left">
+          <div class="border-r border-[#E8DEC9]/80 pr-3 sm:pr-6">
+            <div class="font-luxury text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal leading-none">430+</div>
+            <p class="text-xs text-brand-muted mt-1.5 font-medium">Acara Sukses</p>
           </div>
-          <span class="hidden sm:inline text-[#D4C5AE]">/</span>
-          <div class="flex items-baseline gap-2.5">
-            <span class="font-luxury text-2xl sm:text-3xl font-bold text-brand-charcoal">100%</span>
-            <span class="text-xs sm:text-sm text-brand-muted font-medium">Protokol Dilatih</span>
+          <div class="border-r border-[#E8DEC9]/80 pr-3 sm:pr-6">
+            <div class="font-luxury text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal leading-none">100%</div>
+            <p class="text-xs text-brand-muted mt-1.5 font-medium">Protokol Dilatih</p>
           </div>
-          <span class="hidden sm:inline text-[#D4C5AE]">/</span>
-          <div class="flex items-baseline gap-2.5">
-            <span class="font-luxury text-2xl sm:text-3xl font-bold text-brand-charcoal">30+</span>
-            <span class="text-xs sm:text-sm text-brand-muted font-medium">Varian Busana</span>
+          <div class="pl-1 sm:pl-0">
+            <div class="font-luxury text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal leading-none">30+</div>
+            <p class="text-xs text-brand-muted mt-1.5 font-medium">Varian Busana</p>
           </div>
         </div>
 
@@ -192,27 +214,26 @@
   </section>
 
   <!-- WHO WE ARE & WHY US -->
-  <section id="about" class="py-20 bg-white border-y border-[#E5DAC8]">
+  <section id="about" class="py-20 bg-[#FAF7F2] border-y border-[#ECE2D2]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14 items-end">
-        <div class="lg:col-span-7">
-          <span class="text-xs uppercase font-semibold tracking-[0.16em] text-brand-goldDark">Keunggulan Précieux</span>
-          <h2 class="font-luxury text-3xl sm:text-4xl text-brand-charcoal font-bold mt-2">
-            Mengapa Acara Besar Memilih Précieux Usher?
-          </h2>
-        </div>
-        <div class="lg:col-span-5">
-          <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
-            Lebih dari sekadar penerima tamu, kami adalah representasi kemewahan dan keramahtamahan pertama yang dirasakan
-            oleh tamu undangan kehormatan Anda.
-          </p>
-        </div>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-goldDark">Keunggulan Précieux</span>
+        <h2 class="font-luxury text-3xl sm:text-4xl text-brand-charcoal font-bold mt-2">
+          Mengapa Acara Besar Memilih Précieux Usher?
+        </h2>
+        <p class="text-brand-muted mt-4 text-sm sm:text-base">
+          Lebih dari sekadar penerima tamu, kami adalah representasi kemewahan dan keramahtamahan pertama yang dirasakan
+          oleh tamu undangan kehormatan Anda.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         <!-- Feature 1 -->
-        <div class="border-t-2 border-brand-gold/50 pt-6">
-          <span class="font-luxury text-sm font-semibold text-brand-goldDark block mb-3">01</span>
+        <div class="soft-card p-7 rounded-2xl">
+          <div
+            class="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#EADFCB] flex items-center justify-center text-brand-goldDark text-lg mb-5">
+            <i class="fa-solid fa-star"></i>
+          </div>
           <h3 class="font-luxury text-xl font-bold text-brand-charcoal mb-2">Penampilan Prima & Sopan</h3>
           <p class="text-sm text-brand-muted leading-relaxed">
             Standar grooming tinggi, postur anggun, serta senyuman tulus yang dilatih khusus menyambut tamu VVIP dan
@@ -221,8 +242,11 @@
         </div>
 
         <!-- Feature 2 -->
-        <div class="border-t-2 border-[#E5DAC8] pt-6">
-          <span class="font-luxury text-sm font-semibold text-brand-goldDark block mb-3">02</span>
+        <div class="soft-card p-7 rounded-2xl">
+          <div
+            class="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#EADFCB] flex items-center justify-center text-brand-goldDark text-lg mb-5">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
           <h3 class="font-luxury text-xl font-bold text-brand-charcoal mb-2">Koleksi Gaun Lengkap</h3>
           <p class="text-sm text-brand-muted leading-relaxed">
             Pilihan busana selaras tema acara: Mulai dari Gaun Pesta, Kebaya Songket Tradisional Payet, Hijab-friendly,
@@ -231,8 +255,11 @@
         </div>
 
         <!-- Feature 3 -->
-        <div class="border-t-2 border-[#E5DAC8] pt-6">
-          <span class="font-luxury text-sm font-semibold text-brand-goldDark block mb-3">03</span>
+        <div class="soft-card p-7 rounded-2xl">
+          <div
+            class="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#EADFCB] flex items-center justify-center text-brand-goldDark text-lg mb-5">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
           <h3 class="font-luxury text-xl font-bold text-brand-charcoal mb-2">Koordinasi Fleksibel & WO</h3>
           <p class="text-sm text-brand-muted leading-relaxed">
             Telah bekerjasama dengan Wedding Organizer (WO) papan atas seperti Mahar Agung Organizer dan berbagai
@@ -241,8 +268,11 @@
         </div>
 
         <!-- Feature 4 -->
-        <div class="border-t-2 border-[#E5DAC8] pt-6">
-          <span class="font-luxury text-sm font-semibold text-brand-goldDark block mb-3">04</span>
+        <div class="soft-card p-7 rounded-2xl">
+          <div
+            class="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#EADFCB] flex items-center justify-center text-brand-goldDark text-lg mb-5">
+            <i class="fa-solid fa-people-arrows"></i>
+          </div>
           <h3 class="font-luxury text-xl font-bold text-brand-charcoal mb-2">Full Package Services</h3>
           <p class="text-sm text-brand-muted leading-relaxed">
             Menyediakan Pagar Ayu, Pagar Bagus (Pria), Pasukan Kembar Mayang Adat Jawa, Bridesmaid/Groom's Man, hingga
@@ -254,10 +284,10 @@
   </section>
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="py-20 bg-[#FAF7F2]">
+  <section id="services" class="py-20 bg-[#FFFDF9]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl mb-14">
-        <span class="text-xs uppercase font-semibold tracking-[0.16em] text-brand-goldDark">Layanan Profesional Kami</span>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-goldDark">Layanan Profesional Kami</span>
         <h2 class="font-luxury text-3xl sm:text-4xl text-brand-charcoal font-bold mt-2">
           Hadir untuk Berbagai Format Perayaan
         </h2>
@@ -266,14 +296,18 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Service Card 1 -->
-        <div class="bg-[#FFFDF9] border border-[#E5DAC8] rounded-lg p-7 flex flex-col justify-between">
+        <div class="soft-card rounded-2xl p-7 flex flex-col justify-between">
           <div>
+            <div
+              class="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#EADFCB] text-brand-goldDark flex items-center justify-center text-lg mb-5">
+              <i class="fa-solid fa-ring"></i>
+            </div>
             <h3 class="font-luxury text-2xl font-bold text-brand-charcoal mb-3">Wedding Receptions</h3>
             <p class="text-sm text-brand-muted leading-relaxed mb-5">
               Penerimaan tamu resepsi bergaya Internasional maupun Tradisional. Mengawal registrasi tamu, pemberian
               souvenir, hingga pengantaran tamu VIP ke meja kehormatan.
             </p>
-            <ul class="text-xs text-brand-charcoal/85 space-y-2.5 mb-7 border-t border-[#EFE7D8] pt-4">
+            <ul class="text-xs text-brand-charcoal/85 space-y-2.5 mb-6 border-t border-[#F0E8DA] pt-4">
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Pagar Ayu Modern (Long Dress / Mini Dress)
               </li>
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Pagar Ayu Tradisional (Kebaya Payet &
@@ -284,19 +318,23 @@
           <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="wedding" target="_blank"
             rel="noopener noreferrer"
             class="wa-cta text-xs font-bold text-brand-goldDark hover:text-brand-charcoal transition-colors flex items-center gap-1.5 uppercase tracking-wider">
-            <span>Tanya Jadwal Wedding</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            <span>Tanya Jadwal Wedding</span> <i class="fa-solid fa-angle-right"></i>
           </a>
         </div>
 
         <!-- Service Card 2 -->
-        <div class="bg-[#FFFDF9] border border-[#E5DAC8] rounded-lg p-7 flex flex-col justify-between">
+        <div class="soft-card rounded-2xl p-7 flex flex-col justify-between">
           <div>
+            <div
+              class="w-12 h-12 rounded-full bg-[#F8EEEC] border border-[#E8D5D1] text-rose-800 flex items-center justify-center text-lg mb-5">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
             <h3 class="font-luxury text-2xl font-bold text-brand-charcoal mb-3">Corporate & Gala Event</h3>
             <p class="text-sm text-brand-muted leading-relaxed mb-5">
               Pernah dipercaya untuk event resmi institusi dan BUMN seperti Pertamina. Usherettes formal berjas rapi,
               celana/rok elegan untuk konferensi, seminar, dan gathering.
             </p>
-            <ul class="text-xs text-brand-charcoal/85 space-y-2.5 mb-7 border-t border-[#EFE7D8] pt-4">
+            <ul class="text-xs text-brand-charcoal/85 space-y-2.5 mb-6 border-t border-[#F0E8DA] pt-4">
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Jas Wanita (Kemeja Hitam / Putih)</li>
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Jas Pria Formal untuk VVIP Protocol</li>
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Handal menangani registrasi barcode/digital
@@ -306,19 +344,23 @@
           <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="corporate" target="_blank"
             rel="noopener noreferrer"
             class="wa-cta text-xs font-bold text-brand-goldDark hover:text-brand-charcoal transition-colors flex items-center gap-1.5 uppercase tracking-wider">
-            <span>Proposal Corporate</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            <span>Proposal Corporate</span> <i class="fa-solid fa-angle-right"></i>
           </a>
         </div>
 
         <!-- Service Card 3 -->
-        <div class="bg-[#FFFDF9] border border-[#E5DAC8] rounded-lg p-7 flex flex-col justify-between">
+        <div class="soft-card rounded-2xl p-7 flex flex-col justify-between">
           <div>
+            <div
+              class="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#EADFCB] text-brand-goldDark flex items-center justify-center text-lg mb-5">
+              <i class="fa-solid fa-cake-candles"></i>
+            </div>
             <h3 class="font-luxury text-2xl font-bold text-brand-charcoal mb-3">Birthday & Sweet 17th</h3>
             <p class="text-sm text-brand-muted leading-relaxed mb-5">
               Meriahkan perayaan ulang tahun, anniversary, dan pesta eksklusif dengan usher berbusana ceria, fresh, dan
               modis sesuai dress code yang ditentukan.
             </p>
-            <ul class="text-xs text-brand-charcoal/85 space-y-2.5 mb-7 border-t border-[#EFE7D8] pt-4">
+            <ul class="text-xs text-brand-charcoal/85 space-y-2.5 mb-6 border-t border-[#F0E8DA] pt-4">
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Gaun Lilac, Baby Blue, Pinky Pearl & Lime
               </li>
               <li><i class="fa-solid fa-check text-brand-goldDark mr-2"></i> Mini dress kekinian & elegan</li>
@@ -329,7 +371,7 @@
           <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="birthday" target="_blank"
             rel="noopener noreferrer"
             class="wa-cta text-xs font-bold text-brand-goldDark hover:text-brand-charcoal transition-colors flex items-center gap-1.5 uppercase tracking-wider">
-            <span>Tanya Paket Birthday</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            <span>Tanya Paket Birthday</span> <i class="fa-solid fa-angle-right"></i>
           </a>
         </div>
 
@@ -359,40 +401,40 @@
       <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-2 sm:pb-0 sm:flex-wrap mb-6 sm:mb-10"
         id="filterContainer">
         <button onclick="filterCatalog('all', this)"
-          class="filter-btn whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-colors bg-brand-charcoal text-white">
+          class="filter-btn whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-charcoal text-white shadow-sm">
           Semua Koleksi
         </button>
         <button onclick="filterCatalog('gaun', this)"
-          class="filter-btn whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-colors bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-charcoal">
+          class="filter-btn whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-gold">
           Gaun
         </button>
         <button onclick="filterCatalog('dress-long-sleeve', this)"
-          class="filter-btn whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-colors bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-charcoal">
+          class="filter-btn whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-gold">
           Dress Long Sleeve
         </button>
         <button onclick="filterCatalog('kebaya', this)"
-          class="filter-btn whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-colors bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-charcoal">
+          class="filter-btn whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-gold">
           Kebaya
         </button>
         <button onclick="filterCatalog('formal-attire', this)"
-          class="filter-btn whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-colors bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-charcoal">
+          class="filter-btn whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-gold">
           Formal Attire
         </button>
         <button onclick="filterCatalog('adat-pria', this)"
-          class="filter-btn whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider transition-colors bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-charcoal">
+          class="filter-btn whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-[#FAF7F2] text-brand-charcoal border border-[#DFD5C4] hover:border-brand-gold">
           Kembar Mayang & Pagar Bagus
         </button>
       </div>
 
       <!-- Catalog Grid Items -->
-      <div id="catalogGrid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+      <div id="catalogGrid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 sm:gap-6">
         <!-- Rendered by JS -->
       </div>
 
       <!-- Mobile Expand / Collapse Catalog Button -->
       <div id="mobileCatalogToggleWrap" class="mt-6 text-center sm:hidden hidden">
         <button id="mobileCatalogToggleBtn" onclick="toggleMobileCatalog()"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-md text-xs font-bold uppercase tracking-wider text-brand-charcoal bg-[#FAF7F2] border border-[#D4C5AE] hover:border-brand-charcoal transition-colors">
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-brand-charcoal bg-[#FAF7F2] border border-[#DACBB5] hover:border-brand-gold transition-all shadow-sm">
           <span id="mobileCatalogToggleText">Lihat Semua Koleksi</span>
           <i id="mobileCatalogToggleIcon" class="fa-solid fa-chevron-down text-xs text-brand-goldDark"></i>
         </button>
@@ -400,15 +442,21 @@
 
       <!-- Catalog Note -->
       <div
-        class="mt-10 sm:mt-12 p-5 sm:p-6 rounded-lg bg-[#FAF7F2] border border-[#E5DAC8] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div class="text-left">
-          <h4 class="font-luxury font-bold text-base text-brand-charcoal">Punya Tema Warna Khusus?</h4>
-          <p class="text-xs sm:text-sm text-brand-muted mt-0.5">Konsultasikan kebutuhan warna spesifik Anda. Kami siap mencocokkan gaun
-            dan aksesori pendukung.</p>
+        class="mt-10 sm:mt-12 p-5 sm:p-6 rounded-2xl bg-[#FAF7F2] border border-[#EADFCB] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4 text-left">
+          <div
+            class="w-12 h-12 rounded-full bg-white border border-[#EADFCB] shadow-sm flex-shrink-0 flex items-center justify-center text-brand-goldDark text-lg">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-brand-charcoal">Punya Tema Warna Khusus?</h4>
+            <p class="text-xs text-brand-muted mt-0.5">Konsultasikan kebutuhan warna spesifik Anda. Kami siap mencocokkan gaun
+              dan aksesori pendukung.</p>
+          </div>
         </div>
         <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="color" target="_blank"
           rel="noopener noreferrer"
-          class="wa-cta whitespace-nowrap px-6 py-3 rounded-md text-xs font-semibold uppercase tracking-wider text-white bg-brand-charcoal hover:bg-[#3A342F] transition-colors">
+          class="wa-cta btn-gold whitespace-nowrap px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider">
           Diskusi Warna Acara
         </a>
       </div>
@@ -417,14 +465,14 @@
   </section>
 
   <!-- KEMBAR MAYANG & PAGAR BAGUS SPECIAL SPOTLIGHT -->
-  <section id="traditional" class="py-20 bg-[#24201D] text-white">
+  <section id="traditional" class="py-20 bg-[#26211D] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <div class="lg:col-span-6">
-          <span class="text-xs uppercase font-semibold tracking-[0.16em] text-[#DFBE7B]">Layanan Sakral & Adat</span>
+          <span class="text-xs uppercase font-bold tracking-[0.2em] text-[#DFBE7B]">Layanan Sakral & Adat</span>
           <h2 class="font-luxury text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 leading-tight">
-            Kembar Mayang & <br><span class="text-[#E6CA85] italic font-serif font-semibold">Pagar Bagus (Pria)</span>
+            Kembar Mayang & <br><span class="text-[#E6CA85] italic font-serif">Pagar Bagus (Pria)</span>
           </h2>
           <p class="text-gray-300 mt-5 text-sm sm:text-base leading-relaxed">
             Untuk pernikahan adat Jawa yang penuh makna dan kesakralan, Précieux menghadirkan tim <strong>Kembar
@@ -432,62 +480,92 @@
             prosesi adat temu pengantin.
           </p>
 
-          <div class="mt-8 space-y-5 border-t border-white/15 pt-6">
-            <div>
-              <h4 class="font-bold text-white text-sm">Kembar Mayang Adat Jawa</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1">Bebas pilih kebaya wanita serasi dengan jarik klasik, langkah
-                kompak mengawal upacara panggih/temu.</p>
+          <div class="mt-8 space-y-4">
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-[#312B26] border border-white/10">
+              <div
+                class="w-10 h-10 rounded-full bg-[#DFBE7B]/15 text-[#DFBE7B] flex items-center justify-center flex-shrink-0 text-base">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Kembar Mayang Adat Jawa</h4>
+                <p class="text-xs text-gray-300 mt-1">Bebas pilih kebaya wanita serasi dengan jarik klasik, langkah
+                  kompak mengawal upacara panggih/temu.</p>
+              </div>
             </div>
 
-            <div class="border-t border-white/10 pt-5">
-              <h4 class="font-bold text-white text-sm">Pagar Bagus (Basofi / Blazer Pria)</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1">Tersedia set busana Basofi tradisional Jawa lengkap dengan
-                blangkon, atau setelan jas modern kemeja putih/hitam.</p>
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-[#312B26] border border-white/10">
+              <div
+                class="w-10 h-10 rounded-full bg-[#DFBE7B]/15 text-[#DFBE7B] flex items-center justify-center flex-shrink-0 text-base">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Pagar Bagus (Basofi / Blazer Pria)</h4>
+                <p class="text-xs text-gray-300 mt-1">Tersedia set busana Basofi tradisional Jawa lengkap dengan
+                  blangkon, atau setelan jas modern kemeja putih/hitam.</p>
+              </div>
             </div>
 
-            <div class="border-t border-white/10 pt-5">
-              <h4 class="font-bold text-white text-sm">Bridesmaid & Groom’s Man Assistance</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1">Membantu pendamping pengantin agar seluruh susunan acara kirab
-                berjalan anggun dan tertata rapi.</p>
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-[#312B26] border border-white/10">
+              <div
+                class="w-10 h-10 rounded-full bg-[#DFBE7B]/15 text-[#DFBE7B] flex items-center justify-center flex-shrink-0 text-base">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Bridesmaid & Groom’s Man Assistance</h4>
+                <p class="text-xs text-gray-300 mt-1">Membantu pendamping pengantin agar seluruh susunan acara kirab
+                  berjalan anggun dan tertata rapi.</p>
+              </div>
             </div>
           </div>
 
           <div class="mt-8">
             <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="adat" target="_blank"
               rel="noopener noreferrer"
-              class="wa-cta inline-flex items-center gap-2 px-7 py-3.5 rounded-md text-xs font-bold uppercase tracking-wider text-brand-charcoal bg-[#E6CA85] hover:bg-[#DFBE7B] transition-colors">
+              class="wa-cta inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#24201D] bg-[#E6CA85] hover:bg-[#DFBE7B] transition-colors">
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span>Konsultasi Paket Adat</span>
             </a>
           </div>
         </div>
 
-        <!-- Visual breakdown -->
-        <div class="lg:col-span-6 lg:pt-4">
+        <!-- Visual representation -->
+        <div class="lg:col-span-6">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="rounded-lg p-6 border border-white/15 bg-[#2D2824]">
-              <span class="font-luxury text-xs font-semibold text-[#DFBE7B] tracking-widest">01</span>
-              <h4 class="font-luxury font-bold text-lg text-white mt-2">Kembar Mayang</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1.5 leading-relaxed">Busana kebaya kembar dengan kain jarik senada dan riasan anggun
-                khas putri Solo/Jogja.</p>
+            <div class="space-y-4">
+              <div class="rounded-2xl p-6 bg-[#312B26] border border-white/10 hover:border-[#DFBE7B]/50 transition-colors">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#DFBE7B] text-[#24201D] font-bold flex items-center justify-center text-xs mb-3">
+                  01</div>
+                <h4 class="font-luxury font-bold text-base text-[#DFBE7B]">Kembar Mayang</h4>
+                <p class="text-xs text-gray-300 mt-1.5 leading-relaxed">Busana kebaya kembar dengan kain jarik senada dan riasan anggun
+                  khas putri Solo/Jogja.</p>
+              </div>
+              <div class="rounded-2xl p-6 bg-[#312B26] border border-white/10 hover:border-[#DFBE7B]/50 transition-colors">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#DFBE7B] text-[#24201D] font-bold flex items-center justify-center text-xs mb-3">
+                  02</div>
+                <h4 class="font-luxury font-bold text-base text-[#DFBE7B]">Pagar Bagus Basofi</h4>
+                <p class="text-xs text-gray-300 mt-1.5 leading-relaxed">Pria dengan setelan Basofi adat Jawa, jarik, boro samir, dan
+                  blangkon rapi.</p>
+              </div>
             </div>
-            <div class="rounded-lg p-6 border border-white/15 bg-[#2D2824]">
-              <span class="font-luxury text-xs font-semibold text-[#DFBE7B] tracking-widest">02</span>
-              <h4 class="font-luxury font-bold text-lg text-white mt-2">Pagar Bagus Basofi</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1.5 leading-relaxed">Pria dengan setelan Basofi adat Jawa, jarik, boro samir, dan
-                blangkon rapi.</p>
-            </div>
-            <div class="rounded-lg p-6 border border-white/15 bg-[#2D2824]">
-              <span class="font-luxury text-xs font-semibold text-[#DFBE7B] tracking-widest">03</span>
-              <h4 class="font-luxury font-bold text-lg text-white mt-2">Jas Pria Modern</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1.5 leading-relaxed">Untuk International Wedding atau Corporate Reception, opsi dasi
-                formal siap pakai.</p>
-            </div>
-            <div class="rounded-lg p-6 border border-white/15 bg-[#2D2824]">
-              <span class="font-luxury text-xs font-semibold text-[#DFBE7B] tracking-widest">04</span>
-              <h4 class="font-luxury font-bold text-lg text-white mt-2">Briefing Khusus Adat</h4>
-              <p class="text-xs sm:text-sm text-gray-300 mt-1.5 leading-relaxed">Didampingi arahan tata cara jalannya upacara adat bersama
-                pranatacara / pemaes.</p>
+            <div class="space-y-4 sm:pt-6">
+              <div class="rounded-2xl p-6 bg-[#312B26] border border-white/10 hover:border-[#DFBE7B]/50 transition-colors">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#DFBE7B] text-[#24201D] font-bold flex items-center justify-center text-xs mb-3">
+                  03</div>
+                <h4 class="font-luxury font-bold text-base text-[#DFBE7B]">Jas Pria Modern</h4>
+                <p class="text-xs text-gray-300 mt-1.5 leading-relaxed">Untuk International Wedding atau Corporate Reception, opsi dasi
+                  formal siap pakai.</p>
+              </div>
+              <div class="rounded-2xl p-6 bg-[#312B26] border border-white/10 hover:border-[#DFBE7B]/50 transition-colors">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#DFBE7B] text-[#24201D] font-bold flex items-center justify-center text-xs mb-3">
+                  04</div>
+                <h4 class="font-luxury font-bold text-base text-[#DFBE7B]">Briefing Khusus Adat</h4>
+                <p class="text-xs text-gray-300 mt-1.5 leading-relaxed">Didampingi arahan tata cara jalannya upacara adat bersama
+                  pranatacara / pemaes.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -499,8 +577,8 @@
   <!-- TESTIMONIALS & TRUST SECTION -->
   <section id="testimonials" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl mb-14">
-        <span class="text-xs uppercase font-semibold tracking-[0.16em] text-brand-goldDark">Kata Mereka</span>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-goldDark">Kata Mereka</span>
         <h2 class="font-luxury text-3xl sm:text-4xl text-brand-charcoal font-bold mt-2">
           Kepercayaan Pengantin & Rekan Organizer
         </h2>
@@ -511,45 +589,75 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Testimonial 1 -->
-        <div class="p-7 rounded-lg bg-[#FAF7F2] border border-[#E5DAC8] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#FAF7F2] border border-[#EBE1D0] flex flex-col justify-between">
           <div>
+            <div class="text-brand-gold flex gap-1 mb-4 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
             <p class="text-sm text-brand-charcoal/90 italic leading-relaxed mb-6">
               "Terima kasih tim Précieux! Tamu-tamu banyak yang memuji usherettes-nya sangat ramah, cantik, dan seragam
               kemeja kebaya payetnya super mewah. Mengarahkan alur meja VIP tanpa kendala sama sekali."
             </p>
           </div>
-          <div class="border-t border-[#E5DAC8] pt-4">
-            <h5 class="text-sm font-bold text-brand-charcoal">Aldy & Adeline</h5>
-            <p class="text-xs text-brand-muted mt-0.5">Wedding di Grand City Ballroom Surabaya</p>
+          <div class="border-t border-[#E5DAC6] pt-4 flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center font-bold text-rose-800 text-xs">
+              A&A
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-brand-charcoal">Aldy & Adeline</h5>
+              <p class="text-xs text-brand-muted">Wedding di Grand City Ballroom Surabaya</p>
+            </div>
           </div>
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="p-7 rounded-lg bg-[#FAF7F2] border border-[#E5DAC8] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#FAF7F2] border border-[#EBE1D0] flex flex-col justify-between">
           <div>
+            <div class="text-brand-gold flex gap-1 mb-4 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
             <p class="text-sm text-brand-charcoal/90 italic leading-relaxed mb-6">
               "Sebagai WO, paling tenang kalau partner usher-nya Précieux. Anak-anaknya sigap, tepat waktu pas briefing,
               dan tahu flow penerimaan angpao & souvenir dengan rapi. Sangat recommended!"
             </p>
           </div>
-          <div class="border-t border-[#E5DAC8] pt-4">
-            <h5 class="text-sm font-bold text-brand-charcoal">Mahar Agung Organizer</h5>
-            <p class="text-xs text-brand-muted mt-0.5">Wedding Organizer Partner</p>
+          <div class="border-t border-[#E5DAC6] pt-4 flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-brand-goldDark text-xs">
+              MWO
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-brand-charcoal">Mahar Agung Organizer</h5>
+              <p class="text-xs text-brand-muted">Wedding Organizer Partner</p>
+            </div>
           </div>
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="p-7 rounded-lg bg-[#FAF7F2] border border-[#E5DAC8] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#FAF7F2] border border-[#EBE1D0] flex flex-col justify-between">
           <div>
+            <div class="text-brand-gold flex gap-1 mb-4 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
             <p class="text-sm text-brand-charcoal/90 italic leading-relaxed mb-6">
               "Acara Adat Jawa kami kemarin pakai paket Kembar Mayang dan Pagar Bagus Basofi dari Précieux. Kostumnya
               matching banget sama dekorasi pelaminan. Terima kasih sudah bikin momen pernikahan kami sakral dan
               elegan!"
             </p>
           </div>
-          <div class="border-t border-[#E5DAC8] pt-4">
-            <h5 class="text-sm font-bold text-brand-charcoal">Nenggala & Allini</h5>
-            <p class="text-xs text-brand-muted mt-0.5">Adat Jawa Wedding di Malang</p>
+          <div class="border-t border-[#E5DAC6] pt-4 flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center font-bold text-emerald-800 text-xs">
+              N&A
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-brand-charcoal">Nenggala & Allini</h5>
+              <p class="text-xs text-brand-muted">Adat Jawa Wedding di Malang</p>
+            </div>
           </div>
         </div>
       </div>
@@ -558,24 +666,24 @@
   </section>
 
   <!-- CTA FINAL BANNER -->
-  <section class="py-16 bg-[#F3ECE1] border-t border-[#E2D6C1] text-brand-charcoal">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-luxury text-3xl sm:text-4xl font-bold tracking-tight">
+  <section class="py-16 bg-[#B4873E] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-luxury text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
         Pastikan Tanggal Bahagia Anda Terjadwal Bersama Précieux
       </h2>
-      <p class="text-brand-muted text-sm sm:text-base max-w-2xl mx-auto mt-4">
+      <p class="text-white/95 text-sm sm:text-base max-w-2xl mx-auto mt-4">
         Slot tanggal pernikahan dan event weekend terbatas. Konsultasikan jumlah usherette, pilihan warna gaun, serta
         lokasi acara Anda hari ini.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="general" target="_blank"
           rel="noopener noreferrer"
-          class="wa-cta px-8 py-4 rounded-md bg-brand-charcoal text-white font-semibold uppercase tracking-wider text-xs hover:bg-[#3A342F] transition-colors flex items-center gap-2">
-          <i class="fa-brands fa-whatsapp text-base"></i>
+          class="wa-cta px-8 py-4 rounded-full bg-white text-brand-charcoal font-bold uppercase tracking-wider text-xs shadow-lg hover:bg-[#FAF7F2] transition-colors flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg text-emerald-700"></i>
           <span>Hubungi WhatsApp Resmi</span>
         </a>
         <a href="https://instagram.com/precieuxpagarayu" target="_blank" rel="noopener noreferrer"
-          class="px-8 py-4 rounded-md bg-white border border-[#D4C5AE] text-brand-charcoal font-semibold uppercase tracking-wider text-xs hover:border-brand-charcoal transition-colors flex items-center gap-2">
+          class="px-8 py-4 rounded-full bg-[#9E7330] border border-white/40 text-white font-bold uppercase tracking-wider text-xs hover:bg-[#8A6320] transition-colors flex items-center gap-2">
           <i class="fa-brands fa-instagram text-base"></i>
           <span>Follow @precieuxpagarayu</span>
         </a>
@@ -605,12 +713,12 @@
           </p>
           <div class="flex gap-3 mt-6 text-sm text-gray-300">
             <a href="https://instagram.com/precieuxpagarayu" target="_blank" rel="noopener noreferrer"
-              class="w-9 h-9 rounded-md bg-white/5 border border-white/15 flex items-center justify-center hover:text-[#DFBE7B] hover:border-[#DFBE7B] transition-colors">
+              class="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center hover:text-[#DFBE7B] hover:border-[#DFBE7B] transition-colors">
               <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="https://api.whatsapp.com/send?phone=6282338913856" data-wa-template="general" target="_blank"
               rel="noopener noreferrer"
-              class="wa-cta w-9 h-9 rounded-md bg-white/5 border border-white/15 flex items-center justify-center hover:text-[#DFBE7B] hover:border-[#DFBE7B] transition-colors">
+              class="wa-cta w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center hover:text-[#DFBE7B] hover:border-[#DFBE7B] transition-colors">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
@@ -651,26 +759,26 @@
 
   <!-- PHOTO LIGHTBOX MODAL FOR WARDROBE ITEMS -->
   <div id="itemModal"
-    class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-3 sm:p-4">
-    <div class="bg-white rounded-xl max-w-lg w-full p-4 sm:p-6 shadow-2xl border border-[#E5DAC8] relative">
+    class="fixed inset-0 z-50 hidden bg-black/75 flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-4 sm:p-6 shadow-2xl border border-[#EADFCB] relative">
       <button onclick="closeModal()"
-        class="absolute top-3 right-3 z-20 w-9 h-9 rounded-md bg-white border border-[#E5DAC8] text-gray-700 hover:text-brand-charcoal flex items-center justify-center"
+        class="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-white border border-[#E8DEC9] text-gray-600 hover:text-brand-charcoal flex items-center justify-center shadow-sm"
         aria-label="Tutup">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <!-- Enlarged Photo Preview -->
       <div
-        class="relative bg-[#FAF7F2] rounded-lg overflow-hidden border border-[#ECE0CE] mb-4 flex items-center justify-center">
+        class="relative bg-[#FAF7F2] rounded-xl overflow-hidden border border-[#ECE0CE] mb-4 flex items-center justify-center">
         <img id="modalImage" src="" alt="" class="w-full max-h-[60vh] object-contain mx-auto">
 
         <button type="button" onclick="navigateModal(-1)"
-          class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-md bg-white/95 hover:bg-white text-brand-charcoal shadow flex items-center justify-center transition-colors"
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center transition-all"
           aria-label="Foto sebelumnya">
           <i class="fa-solid fa-chevron-left text-xs"></i>
         </button>
         <button type="button" onclick="navigateModal(1)"
-          class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-md bg-white/95 hover:bg-white text-brand-charcoal shadow flex items-center justify-center transition-colors"
+          class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center transition-all"
           aria-label="Foto berikutnya">
           <i class="fa-solid fa-chevron-right text-xs"></i>
         </button>
@@ -679,7 +787,7 @@
       <div class="flex items-start justify-between gap-3">
         <div>
           <span id="modalCategoryBadge"
-            class="inline-block text-xs font-semibold uppercase tracking-wider text-brand-goldDark mb-1"></span>
+            class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#FAF7F2] border border-[#EADFCB] text-brand-goldDark mb-1.5"></span>
           <h3 id="modalTitle" class="font-luxury text-lg sm:text-xl font-bold text-brand-charcoal"></h3>
           <p class="text-xs text-brand-muted mt-1" id="modalStyling"></p>
         </div>
@@ -688,7 +796,7 @@
 
       <div class="mt-4">
         <button onclick="closeModal()"
-          class="w-full py-2.5 rounded-md border border-[#D4C5AE] bg-[#FAF7F2] text-xs font-bold uppercase tracking-wider text-brand-charcoal hover:bg-[#F3ECE1] transition-colors">
+          class="w-full py-2.5 rounded-full border border-[#DACBB5] bg-[#FAF7F2] text-xs font-bold uppercase tracking-wider text-brand-charcoal hover:bg-[#F3ECE1] transition-colors">
           Tutup Foto
         </button>
       </div>
@@ -1107,19 +1215,19 @@ Mohon info detail paket dan ketersediaan jadwalnya ya. Terima kasih!`
 
       visibleItems.forEach(item => {
         const card = document.createElement('div');
-        card.className = 'bg-[#FFFDF9] rounded-lg overflow-hidden border border-[#E5DAC8] hover:border-brand-gold transition-colors group flex flex-col justify-between cursor-pointer';
+        card.className = 'soft-card rounded-2xl overflow-hidden flex flex-col justify-between cursor-pointer group';
         card.onclick = () => openModal(item.id);
 
         card.innerHTML = `
           <div>
             <div class="aspect-[4/5] overflow-hidden bg-[#FAF7F2]">
-              <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/400x500/F5ECE8/8A6320?text=${encodeURIComponent(item.name)}'" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
+              <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/400x500/F5ECE8/99732B?text=${encodeURIComponent(item.name)}'" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
             </div>
-            <div class="p-3 sm:p-4">
+            <div class="p-3.5 sm:p-5">
               <span class="block text-xs text-brand-goldDark font-medium mb-1">
                 ${item.badge}
               </span>
-              <h3 class="font-luxury text-sm sm:text-base font-bold text-brand-charcoal leading-snug">
+              <h3 class="font-luxury text-sm sm:text-base font-bold text-brand-charcoal group-hover:text-brand-goldDark transition-colors leading-snug">
                 ${item.name}
               </h3>
               <p class="text-xs text-brand-muted mt-1">
@@ -1127,10 +1235,9 @@ Mohon info detail paket dan ketersediaan jadwalnya ya. Terima kasih!`
               </p>
             </div>
           </div>
-          <div class="px-3 pb-3 sm:px-4 sm:pb-4">
-            <span class="pt-2.5 border-t border-[#EFE7D8] text-xs font-semibold text-brand-charcoal group-hover:text-brand-goldDark transition-colors flex items-center justify-between">
-              <span>Lihat Foto</span>
-              <i class="fa-solid fa-arrow-right text-xs"></i>
+          <div class="px-3.5 pb-3.5 sm:px-5 sm:pb-5">
+            <span class="w-full py-2 rounded-full border border-[#DFD5C4] group-hover:border-brand-gold group-hover:bg-[#FAF7F2] text-xs font-semibold text-brand-charcoal transition-colors flex items-center justify-center">
+              Lihat Foto
             </span>
           </div>
         `;
